@@ -4,6 +4,8 @@
 
 ChatNexus is a modular, Streamlit-based AI chatbot designed for internal engineering workflows. Powered by Google's Gemini 2.5 Flash model and orchestrated via LangChain, it features a responsive Tailwind CSS hybrid UI, token-by-token text streaming, robust MLOps practices, and asynchronous logging.
 
+Live Link: https://chatnexus-netsol.streamlit.app/
+
 ## 🚀 Key Features
 
 *   **High-Performance LLM Integration:** Utilizes `gemini-2.5-flash` via LangChain for rapid, context-aware technical assistance.
