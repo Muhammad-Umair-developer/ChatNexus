@@ -57,7 +57,7 @@ def stream_response(user_input: str) -> Generator[str, None, None]:
     
     # 4. Stream the execution and apply a micro-delay for UX purposes.
     # Gemini is often too fast for the frontend to render the "typing" effect naturally,
-    # so we manually yield words with a 20ms delay.
+    # so we manually yield words with a 60ms delay.
     for chunk in llm.stream(formatted_messages):
         words = chunk.content.split(" ")
         for i, word in enumerate(words):
