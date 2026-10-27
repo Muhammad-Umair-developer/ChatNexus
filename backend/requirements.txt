@@ -5,3 +5,9 @@ psycopg2-binary
 pydantic
 langchain-google-genai
 python-dotenv
+
+# New RAG dependencies
+python-multipart    # Required by FastAPI for file uploads
+pgvector            # PostgreSQL vector math support
+langchain-postgres  # LangChain integration for pgvector
+pypdf               # PDF parsing and text extraction
