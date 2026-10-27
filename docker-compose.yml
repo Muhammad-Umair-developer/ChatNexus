@@ -3,10 +3,10 @@ services:
     image: pgvector/pgvector:pg15
     environment:
       POSTGRES_USER: user
-      POSTGRES_PASSWORD: password
+      POSTGRES_PASSWORD: postgres
       POSTGRES_DB: chatnexus
     ports:
-      - "5432:5432"
+      - "5433:5432"
     volumes:
       - postgres_data:/var/lib/postgresql/data
 
@@ -17,7 +17,7 @@ services:
     env_file:
       - .env
     environment:
-      - DATABASE_URL=postgresql+psycopg2://user:password@db:5432/chatnexus
+      - DATABASE_URL=postgresql+psycopg2://user:postgres@db:5432/chatnexus
     volumes:
       - ./backend:/app
     depends_on:

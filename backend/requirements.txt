@@ -1,13 +1,19 @@
+# Web Framework & Server
 fastapi
 uvicorn
+python-multipart
+
+# Database & ORM
 sqlalchemy
 psycopg2-binary
-pydantic
-langchain-google-genai
-python-dotenv
+pgvector
+langchain-postgres
 
-# New RAG dependencies
-python-multipart    # Required by FastAPI for file uploads
-pgvector            # PostgreSQL vector math support
-langchain-postgres  # LangChain integration for pgvector
-pypdf               # PDF parsing and text extraction
+# LLM & RAG Engine
+pydantic
+python-dotenv
+langchain-google-genai
+langchain-community
+langchain-text-splitters
+pypdf
+google-genai
