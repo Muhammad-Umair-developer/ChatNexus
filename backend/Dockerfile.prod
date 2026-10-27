@@ -1,0 +1,21 @@
+FROM python:3.12-slim
+
+# Create dedicated non-root user
+RUN useradd -m -r nexususer
+
+WORKDIR /app
+
+# Install dependencies with caching
+COPY requirements.txt .
+RUN pip install --default-timeout=1000 --no-cache-dir -r requirements.txt
+
+# Copy source code and transfer ownership
+COPY . .
+RUN chown -R nexususer:nexususer /app
+
+USER nexususer
+
+EXPOSE 8000
+
+# Production command: workers=2, no reload
+CMD ["uvicorn", "main:app", "--host", "0.0.0.0", "--port", "8000", "--workers", "2"]
